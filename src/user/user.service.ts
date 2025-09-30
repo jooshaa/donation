@@ -23,11 +23,20 @@ export class UserService {
     return user
   }
 
-  update(id: number, updateUserDto: UpdateUserDto) {
-    return `This action updates a #${id} user`;
+  async update(id: number, updateUserDto: UpdateUserDto) {
+    const [count, row] = await this.userModel.update(updateUserDto,
+      {
+        where: { id },
+        returning: true
+      })
+    return row[0]
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} user`;
+  async remove(id: number) {
+    const deleted = await this.userModel.destroy({ where: { id } });
+    if (!deleted) {
+      return { message: "not found this kind of id" }
+    }
+    return { message: `deleted id:${id} ` }
   }
 }

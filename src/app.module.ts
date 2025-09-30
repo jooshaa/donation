@@ -2,6 +2,8 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { UserModule } from './user/user.module';
+import { AdminModule } from './admin/admin.module';
+import { RecipientModule } from './recipient/recipient.module';
 
 
 @Module({
@@ -18,7 +20,9 @@ import { UserModule } from './user/user.module';
       logging: false,
       sync: { force: true }
     }),
-    UserModule
+    AdminModule,
+    UserModule,
+    RecipientModule
   ],
   controllers: [],
   providers: [],
