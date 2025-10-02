@@ -23,6 +23,12 @@ export class AdminService {
     return admin
   }
   
+  async findByEmail(email: string){
+    const admin = await this.adminModel.findOne({
+      where: {email}
+    })
+    return admin
+  }
 
   async update(id: number, updateAdminDto: UpdateAdminDto) {
     const [count, row] = await this.adminModel.update(updateAdminDto,

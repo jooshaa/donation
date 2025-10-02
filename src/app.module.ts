@@ -4,6 +4,7 @@ import { SequelizeModule } from '@nestjs/sequelize';
 import { UserModule } from './user/user.module';
 import { AdminModule } from './admin/admin.module';
 import { RecipientModule } from './recipient/recipient.module';
+import { AuthModule } from './auth/auth.module';
 
 
 @Module({
@@ -22,7 +23,8 @@ import { RecipientModule } from './recipient/recipient.module';
     }),
     AdminModule,
     UserModule,
-    RecipientModule
+    RecipientModule,
+    AuthModule
   ],
   controllers: [],
   providers: [],
