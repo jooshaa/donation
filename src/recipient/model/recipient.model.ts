@@ -1,5 +1,6 @@
-import { Model } from "sequelize"
-import { Column, DataType, Table } from "sequelize-typescript"
+
+import { Column, DataType, HasMany, Model, Table } from "sequelize-typescript"
+import { Card } from "../../cards/models/card.models"
 
 interface IRecipient {
     full_name: string
@@ -49,5 +50,8 @@ export class Recipient extends Model<Recipient, IRecipient> {
         allowNull: false
     })
     declare token: string
+
+    @HasMany(()=> Card)
+    card: Card[]
 }
 

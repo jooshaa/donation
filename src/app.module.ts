@@ -5,6 +5,7 @@ import { UserModule } from './user/user.module';
 import { AdminModule } from './admin/admin.module';
 import { RecipientModule } from './recipient/recipient.module';
 import { AuthModule } from './auth/auth.module';
+import { CardsModule } from './cards/cards.module';
 
 
 @Module({
@@ -24,7 +25,8 @@ import { AuthModule } from './auth/auth.module';
     AdminModule,
     UserModule,
     RecipientModule,
-    AuthModule
+    AuthModule,
+    CardsModule
   ],
   controllers: [],
   providers: [],
