@@ -5,7 +5,7 @@ import { SequelizeModule } from '@nestjs/sequelize';
 import { Recipient } from './model/recipient.model';
 
 @Module({
-  imports:[SequelizeModule.forFeature([Recipient  ])],
+  imports:[SequelizeModule.forFeature([Recipient])],
   controllers: [RecipientController],
   providers: [RecipientService],
 })

@@ -6,6 +6,8 @@ import { AdminModule } from './admin/admin.module';
 import { RecipientModule } from './recipient/recipient.module';
 import { AuthModule } from './auth/auth.module';
 import { CardsModule } from './cards/cards.module';
+import { SocialMediaModule } from './social_media/social_media.module';
+import { RecipientSocialModule } from './recipient_social/recipient_social.module';
 
 
 @Module({
@@ -26,7 +28,9 @@ import { CardsModule } from './cards/cards.module';
     UserModule,
     RecipientModule,
     AuthModule,
-    CardsModule
+    CardsModule,
+    SocialMediaModule,
+    RecipientSocialModule
   ],
   controllers: [],
   providers: [],

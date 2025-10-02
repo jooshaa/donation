@@ -13,7 +13,7 @@ import { JwtModule } from '@nestjs/jwt';
       secret: process.env.SECRET_KEY,
       signOptions: { expiresIn: process.env.SECRET_TIME },
     }),
-  ],
+  AdminModule],
   controllers: [AuthController],
   providers: [AuthService],
 })
